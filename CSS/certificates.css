@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
+
+
+/* Certificates & Achievements */
+.credentials {
+    margin-top: 5rem;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.toggle-btn {
+    padding: 1rem 2.5rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.toggle-btn.active,
+.toggle-btn:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+}
+
+.cred-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cred-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.cred-box {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: .15rem solid var(--bg-color);
+    transition: .3s ease;
+    text-align: center;
+}
+/* .cred-box a{
+    
+} */
+.cred-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.cred-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.cred-box p {
+    font-size: 1.4rem;
+}
+
+/* Achivement Section */
+
+#achievements .cred-box {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(0,255,255,0.05);
+    transition: 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+/* Hover effect */
+#achievements .cred-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.12);
+}
+
+.community-box {
+    border-left: 6px solid #00eaff;
+}
+
+.community-box h3 {
+    color: #00eaff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.community-box p {
+    color: #d3d5d7;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* Leetcode */
+.leetcode-box {
+    background: #23272f;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Header */
+.leet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leet-logo {
+    width: 45px;
+    height: 45px;
+    background: url("https://leetcode.com/static/images/LeetCode_logo.png") center/contain no-repeat;
+}
+
+.leet-username {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b88bff;
+    text-decoration: none;
+}
+
+.leet-username:hover {
+    opacity: 0.7;
+}
+
+.leet-rank {
+    font-size: 1.2rem;
+    color: #4ab3ff;
+    font-weight: 700;
+}
+
+/* Content layout */
+.leet-content {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* PIE CHART */
+.leet-pie {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.leet-pie-inner {
+    width: 110px;
+    height: 110px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5b2eff;
+}
+
+/* Right-side text */
+.leet-right {
+    margin-left: 40px;
+}
+
+.easy-text {
+    color: #36d6a9;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.medium-text {
+    color: #ffd33d;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.hard-text {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.leet-right span {
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+
+
+/* View button */
+.view-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: .3s ease;
+}
+
+.view-btn:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.view-btn a{
+    margin-top: 5rem;
+}

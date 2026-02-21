@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
+
+/* Education */
+
+.education {
+    padding: 10rem 9%;
+    background: var(--bg-color);
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.edu-box {
+    background: var(--second-bg-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: .15rem solid var(--bg-color);
+    transition: .3s ease;
+    text-align: center;
+}
+
+.edu-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.03);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.edu-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--main-color);
+}
+
+.edu-box p {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cred-container {
+        grid-template-columns: 1fr;
+    }
+}
