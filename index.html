@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- Box Icon -->
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description"
+        content="Tanishk Raj — Data Analyst & Data Scientist portfolio. Skilled in Python, SQL, Power BI, Tableau, and Machine Learning.">
+    <meta name="keywords" content="Tanishk Raj, Data Analyst, Data Scientist, Portfolio, Python, SQL, Power BI">
+    <meta name="author" content="Tanishk Raj">
+    <title>Tanishk Raj — Data Analyst Portfolio</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./CSS/home.css">
     <link rel="stylesheet" href="./CSS/skill.css">
@@ -13,349 +21,480 @@
     <link rel="stylesheet" href="./CSS/certificates.css">
     <link rel="stylesheet" href="./CSS/education.css">
     <link rel="stylesheet" href="./CSS/contact.css">
+    <link rel="stylesheet" href="./CSS/stats.css">
 </head>
-<body>
-    
-    <!-- Header Design -->
 
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+<body>
+
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">TR.</a>
         <i class="bx bx-menu" id="menu-icon"></i>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#credentials">Certficates & Achivements</a>
+            <a href="#credentials">Credentials</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="header-controls">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark/light mode">
+                <i class="bx bx-moon" id="theme-icon"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- home section design -->
-
+    <!-- HOME SECTION -->
     <section class="home" id="home">
+
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Tanishk Raj</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Data Analyst skilled in SQL, Python, Excel, and BI tools. Experienced in turning raw data into clear insights, building dashboards, and improving reporting workflows. Strong in problem-solving, statistical analysis, and communicating findings for business impact.</p>
+            <h1>Hello, It's Me <br> <span>Tanishk Raj</span></h1>
+            <p class="role-line">I'm a <span class="multiple-text"></span></p>
+            <p class="bio">
+                Skilled in SQL, Python, Excel, and BI tools. I turn raw data into clear insights, build dashboards, and
+                drive business decisions through statistical analysis and storytelling.
+            </p>
+
             <div class="social-media">
-            <a href="https://www.instagram.com/tanishkraj2005/"><i class="bx bxl-instagram"></i></a>
-            <a href="https://github.com/Tanishkraj2005"><i class="bx bxl-github"></i></a>
-            <a href="https://www.linkedin.com/in/tanishkraj08/"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://leetcode.com/u/tanishk-raj08/" target="_blank" aria-label="LeetCode">
+                    <i class="bx bx-code-alt"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tanishkraj08/" target="_blank" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://github.com/Tanishkraj2005" target="_blank" aria-label="GitHub">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.instagram.com/tanishkraj2005/" target="_blank" aria-label="Instagram">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+            </div>
 
-        </div>
-
-
-
-            <a href="./Pdf/CV.pdf" class="btn" target="_blank">View CV</a>
-
-
+            <div class="btn-group">
+                <a href="./Pdf/CV.pdf" class="btn" target="_blank">View CV</a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="bx bx-envelope"></i> Hire Me
+                </a>
+            </div>
         </div>
 
         <div class="home-img">
-            <img src="./Photos/IMG_20251226_092032.png" alt="">
+            <div class="img-wrapper">
+                <img src="./Photos/IMG_20251226_092032.png" alt="Tanishk Raj — Data Analyst">
+            </div>
         </div>
     </section>
 
-    <!-- Skills section Design -->
-<section class="skills" id="skills">
-    <h2 class="heading">My <span>Skills</span></h2>
-    <div class="skills-container">
-        <!-- Box 1 -->
-        <div class="skill-box">
-            <h3>Tools & Visualization</h3>
-            <div class="skill-items">
-                <span>Excel</span>
-                <span>Power BI</span>
-                <span>Tableau</span>
+    <!--  SKILLS SECTION -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <p class="section-subtitle">A toolkit built for turning data into decisions</p>
+
+        <div class="skills-container">
+            <!-- Box 1 -->
+            <div class="skill-box">
+                <i class="bx bx-bar-chart-alt-2 skill-box-icon" style="text-align:center;display:block;"></i>
+                <h3>Tools & Visualization</h3>
+                <div class="skill-items">
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>Tableau</span>
+                    <span>Google Sheets</span>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="skill-box">
+                <i class="bx bx-code-block skill-box-icon" style="text-align:center;display:block;"></i>
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <span>Python</span>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Java</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="skill-box">
+                <i class="bx bx-data skill-box-icon" style="text-align:center;display:block;"></i>
+                <h3>Python Libraries & Database</h3>
+                <div class="skill-items">
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>Scikit-learn</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="skill-box">
+                <i class="bx bx-brain skill-box-icon" style="text-align:center;display:block;"></i>
+                <h3>Core & Soft Skills</h3>
+                <div class="skill-items">
+                    <span>Data Structure & Algorithm</span>
+                    <span>Data Analysis</span>
+                    <span>Data Cleaning</span>
+                    <span>Problem Solving</span>
+                    <span>Communication</span>
+                    <span>Teamwork</span>
+                    <span>Analytical Thinking</span>
+                </div>
             </div>
         </div>
-        <!-- Box 2 -->
-        <div class="skill-box">
-            <h3>Programming Languages</h3>
-            <div class="skill-items">
-                <span>Python</span>
-                <span>C</span>
-                <span>C++</span>
-                <span>Java</span>
+    </section>
+
+    <!--  PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <p class="section-subtitle">Real-world data problems, solved with code and creativity</p>
+
+        <div class="projects-container">
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Finance Tracker Project">
+                    <span class="proj-category">Web App</span>
+                </div>
+                <div class="proj-content">
+                    <h4>Personal Finance Tracker</h4>
+                    <p>A full-stack finance tracking dashboard built with React and Firebase. Visualizes income vs
+                        expenses, budget allocation, and spending trends.</p>
+                    <div class="proj-tags">
+                        <span>React</span><span>Firebase</span><span>Chart.js</span><span>CSS</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Project <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
             </div>
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Fake Review Detection">
+                    <span class="proj-category">ML / AI</span>
+                </div>
+                <div class="proj-content">
+                    <h4>Fake Review Detection System</h4>
+                    <p>Advanced NLP pipeline to detect fake Flipkart reviews using sentiment analysis, duplicate
+                        detection, and ML classification models.</p>
+                    <div class="proj-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Streamlit</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Project <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="EDA Project">
+                    <span class="proj-category">Data Analysis</span>
+                </div>
+                <div class="proj-content">
+                    <h4>Sales Data EDA & Dashboard</h4>
+                    <p>Exploratory data analysis on retail sales data with Power BI dashboard showing KPIs, regional
+                        performance, and product category insights.</p>
+                    <div class="proj-tags">
+                        <span>Python</span><span>Pandas</span><span>Power BI</span><span>Seaborn</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Project <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Study Planner">
+                    <span class="proj-category">Web App</span>
+                </div>
+                <div class="proj-content">
+                    <h4>AI Study Planner</h4>
+                    <p>Smart study planner web app that generates personalized schedules using user input. Tracks
+                        progress with animated charts and reminders.</p>
+                    <div class="proj-tags">
+                        <span>JavaScript</span><span>HTML/CSS</span><span>Local Storage</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Project <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="SQL Analysis">
+                    <span class="proj-category">SQL</span>
+                </div>
+                <div class="proj-content">
+                    <h4>E-Commerce SQL Analysis</h4>
+                    <p>In-depth SQL analysis of an e-commerce database. Queries for customer segmentation, revenue
+                        forecasting, and churn analysis.</p>
+                    <div class="proj-tags">
+                        <span>MySQL</span><span>Excel</span><span>Tableau</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Project <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <div class="proj-img">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Portfolio Website">
+                    <span class="proj-category">Portfolio</span>
+                </div>
+                <div class="proj-content">
+                    <h4>This Portfolio Website</h4>
+                    <p>A responsive, animated portfolio with dark/light mode, particle animations, live LeetCode stats,
+                        and premium color design.</p>
+                    <div class="proj-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Tanishkraj2005" target="_blank" class="proj-link">
+                        View Source <i class="bx bx-link-external"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <!-- Box 3 -->
-        <div class="skill-box">
-            <h3>Python Libraries & Database</h3>
-            <div class="skill-items">
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>Matplotlib</span>
-                <span>Seaborn</span>
-                <span>MySQL</span>
-            </div>
+    </section>
+
+    <!--  CREDENTIALS SECTION -->
+    <section class="credentials" id="credentials">
+        <h2 class="heading">My <span>Credentials</span></h2>
+        <p class="section-subtitle">Certifications and achievements that validate my journey</p>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" id="btn-cert" onclick="showSection('certificates')">
+                <i class="bx bx-certification"></i> Certificates
+            </button>
+            <button class="toggle-btn" id="btn-achv" onclick="showSection('achievements')">
+                <i class="bx bx-trophy"></i> Achievements
+            </button>
         </div>
-        <!-- Box 4 -->
-        <div class="skill-box">
-            <h3>Core & Soft Skills</h3>
-            <div class="skill-items">
-                <span>Data Structure & Algorithm</span>
-                <span>Data Analysis</span>
-                <span>Data Cleaning</span>
-                <span>Problem Solving</span>
-                <span>Communication</span>
-                <span>Teamwork</span>
-                <span>Analytical Thinking</span>
-            </div>
-        </div>
-    </div>
 
-</section>
-
-<!-- Portfolio Secion Design -->
-<section class="projects" id="projects">
-    <h2 class="heading">Latest <span>Project</span></h2>
-    <div class="projects-container">
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In hic, facere architecto illum dolor ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In hic, facere architecto illum dolor ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In hic, facere architecto illum dolor ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In hic, facere architecto illum dolor ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-        <div class="projects-box">
-            <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="">
-            <div class="projects-layer">
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In hic, facere architecto illum dolor ea laboriosam non exercitationem eligendi eum minima voluptates, eaque neque animi consequuntur culpa, eos rem. Officiis!
-                </p>
-                <a href="#"><i class="bx bx-link"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Cerficates and achivements -->
-
-
-<section class="credentials" id="credentials">
-
-    <h2 class="heading">My <span>Credentials</span></h2>
-
-    <!-- Toggle Buttons -->
-    <div class="toggle-buttons">
-        <button class="toggle-btn active" onclick="showSection('certificates')">Certificates</button>
-        <button class="toggle-btn" onclick="showSection('achievements')">Achievements</button>
-    </div>
-
-    <!-- Certificates Section -->
-    <div id="certificates" class="content-section active-section">
-
-        <div class="cred-container">
-
-            <div class="cred-box">
-                <h3>Data Science</h3>
-                <a href="./Pdf/Data Science.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
-
-            <div class="cred-box">
-                <h3>Data Structure & Algorithm</h3>
-                <a href="./Pdf/DSA.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
-
-            <div class="cred-box">
-                <h3>NPTEL Cloud Computing</h3>
-                <a href="./Pdf/NPTEL Cloud Computing.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
-
-            <div class="cred-box">
-                <h3>Mastering in C</h3>
-                <a href="./Pdf/Mastering in C.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
+        <!-- Certificates Section -->
+        <div id="certificates" class="content-section active-section">
+            <div class="cred-container" style="margin-bottom: 5rem;">
 
                 <div class="cred-box">
-                <h3>TCS ION YUVA AI For All</h3>
-                <a href="./Pdf/TCS_ION.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
+                    <div class="cred-icon"><i class="bx bx-line-chart"></i></div>
+                    <h3>Data Science</h3>
+                    <a href="./Pdf/Data Science.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
+                </div>
 
                 <div class="cred-box">
-                <h3>Bits & Bites</h3>
-                <a href="./Pdf/Bites and Bytes.pdf" class="view-btn" target="_blank">View Certficate</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Achievements Section -->
-    <div id="achievements" class="content-section">
-
-        <div class="cred-container2">
-
-            <!-- COMMUNITY DEVELOPMENT CARD -->
-            <div class="cred-box community-box">
-                <h3>Community Development Program</h3>
-                <p>Actively contributed to community-based learning and mentoring.</p>
-            </div>
-
-
-        <div class="cred-box leetcode-box">
-
-            <div class="leet-header">
-                <div class="leet-logo"></div>
-
-                <a class="leet-username" 
-                href="https://leetcode.com/u/tanishk-raj08/" 
-                target="_blank">
-                    tanishk-raj08
-                </a>
-
-                <span class="leet-rank" id="rank">#-----</span>
-            </div>
-
-            <div class="leet-content">
-                
-                <!-- PIE CHART -->
-                <div class="leet-pie">
-                    <div class="leet-pie-inner" id="totalSolved">--</div>
+                    <div class="cred-icon"><i class="bx bx-network-chart"></i></div>
+                    <h3>Data Structure &amp; Algorithm</h3>
+                    <a href="./Pdf/DSA.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
                 </div>
 
-                <!-- Difficulty Text -->
-                <div class="leet-right">
-                    <p class="easy-text">Easy <span id="easyLabel">-- / --</span></p>
-                    <p class="medium-text">Medium <span id="mediumLabel">-- / --</span></p>
-                    <p class="hard-text">Hard <span id="hardLabel">-- / --</span></p>
+                <div class="cred-box">
+                    <div class="cred-icon"><i class="bx bx-cloud"></i></div>
+                    <h3>NPTEL Cloud Computing</h3>
+                    <a href="./Pdf/NPTEL Cloud Computing.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
+                </div>
+
+                <div class="cred-box">
+                    <div class="cred-icon"><i class="bx bx-code"></i></div>
+                    <h3>Mastering in C</h3>
+                    <a href="./Pdf/Mastering in C.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
+                </div>
+
+                <div class="cred-box">
+                    <div class="cred-icon"><i class="bx bx-brain"></i></div>
+                    <h3>TCS ION YUVA AI For All</h3>
+                    <a href="./Pdf/TCS_ION.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
+                </div>
+
+                <div class="cred-box">
+                    <div class="cred-icon"><i class="bx bx-chip"></i></div>
+                    <h3>Bits &amp; Bytes</h3>
+                    <a href="./Pdf/Bites and Bytes.pdf" class="view-btn" target="_blank">
+                        <i class="bx bx-link-external"></i> View Certificate
+                    </a>
                 </div>
 
             </div>
-
         </div>
 
+        <!-- Achievements Section -->
+        <div id="achievements" class="content-section">
+            <div class="cred-container2">
+
+                <div class="community-box">
+                    <h3>🏆 Community Development Program</h3>
+                    <p>Actively contributed to community-based learning and mentoring initiatives, guiding peers in data
+                        analysis and programming fundamentals. Led sessions on Python, SQL, and data storytelling.</p>
+                </div>
+
+                <div class="leetcode-box">
+                    <div class="leet-header">
+                        <div class="leet-logo"></div>
+                        <a class="leet-username" href="https://leetcode.com/u/tanishk-raj08/"
+                            target="_blank">tanishk-raj08</a>
+                        <span class="leet-rank" id="rank">#----</span>
+                    </div>
+
+                    <div class="leet-content">
+                        <div class="leet-pie">
+                            <div class="leet-pie-inner">
+                                <span id="totalSolved">--</span>
+                                <small>Solved</small>
+                            </div>
+                        </div>
+
+                        <div class="leet-right">
+                            <div class="easy-text leet-stat-row">
+                                <span class="leet-dot easy"></span>
+                                <span class="leet-stat-label">Easy</span>
+                                <span id="easyLabel">--/--</span>
+                            </div>
+                            <div class="medium-text leet-stat-row">
+                                <span class="leet-dot medium"></span>
+                                <span class="leet-stat-label">Medium</span>
+                                <span id="mediumLabel">--/--</span>
+                            </div>
+                            <div class="hard-text leet-stat-row">
+                                <span class="leet-dot hard"></span>
+                                <span class="leet-stat-label">Hard</span>
+                                <span id="hardLabel">--/--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="coding-stats"></div>
 
         </div>
+    </section>
 
-    </div>
+    <!--  EDUCATION SECTION -->
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Education</span></h2>
+        <p class="section-subtitle">The academic foundation behind the data-driven mindset</p>
 
-</section>
+        <div class="education-container">
 
+            <div class="edu-box">
+                <span class="edu-year">2023 – Present</span>
+                <h3>Bachelor of Computer Science</h3>
+                <p><strong>College:</strong> Lovely Professional University</p>
+                <p><strong>Specialization:</strong> Data Science & AI</p>
+                <div class="edu-score">
+                    <i class="bx bx-star"></i> CGPA: 7.5
+                </div>
+            </div>
 
-<!-- Education -->
+            <div class="edu-box">
+                <span class="edu-year">2022</span>
+                <h3>Class 12th (PCM)</h3>
+                <p><strong>School:</strong> Open Minds A Birla School</p>
+                <p><strong>Stream:</strong> Physics, Chemistry, Math</p>
+                <div class="edu-score">
+                    <i class="bx bx-star"></i> 67%
+                </div>
+            </div>
 
-<section class="education" id="education">
+            <div class="edu-box">
+                <span class="edu-year">2020</span>
+                <h3>Class 10th</h3>
+                <p><strong>School:</strong> Open Minds A Birla School</p>
+                <p><strong>Board:</strong> CBSE</p>
+                <div class="edu-score">
+                    <i class="bx bx-star"></i> 80%
+                </div>
+            </div>
 
-    <h2 class="heading">My <span>Education</span></h2>
-
-    <div class="education-container">
-
-        <!-- College -->
-        <div class="edu-box">
-            <h3>Bachelor of Computer Science</h3>
-            <p><strong>College:</strong> Lovely Professional University</p>
-            <p><strong>Year:</strong> 2023</p>
-            <p><strong>CGPA:</strong> 7.5</p>
         </div>
+    </section>
 
-        <!-- Class 12 -->
-        <div class="edu-box">
-            <h3>Class 12th (PCM)</h3>
-            <p><strong>School:</strong> Open Minds A Birla School</p>
-            <p><strong>Year:</strong> 2022</p>
-            <p><strong>Percentage:</strong> 67%</p>
-        </div>
-
-        <!-- Class 10 -->
-        <div class="edu-box">
-            <h3>Class 10th</h3>
-            <p><strong>School:</strong> Open Minds A Birla School</p>
-            <p><strong>Year:</strong> 2020</p>
-            <p><strong>Percentage:</strong> 80%</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-    <!-- Contact Section Design -->
-
+    <!--  CONTACT SECTION -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Full Name">
+        <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="phone">Phone (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 9876543210">
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+                </div>
             </div>
-            <div class="input-box">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project or idea..."
+                    required></textarea>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="btn" id="submit-btn">
+                    <i class="bx bx-send"></i> Send Message
+                </button>
             </div>
         </form>
     </section>
 
-    <!-- Footer Design -->
+    <!--  FOOTER  -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2026 by Tanishk Raj | All Rights Reserved.</p>
+            <p>Copyright &copy; 2026 by <span>Tanishk Raj</span> | All Rights Reserved.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="footer-iconTop">
-            <a href="#home"><i class="bx bxs-up-arrow"></i></a>
+            <a href="#home" aria-label="Back to top"><i class="bx bxs-up-arrow"></i></a>
         </div>
     </footer>
 
-    <!-- Scroll Reveal -->
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bx bx-chevrons-up"></i>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Libraries -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- Typed js -->
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-
     <script src="script.js"></script>
-
+    <script src="stats.js"></script>
 </body>
+
 </html>
