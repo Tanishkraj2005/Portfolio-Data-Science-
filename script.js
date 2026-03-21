@@ -214,23 +214,29 @@ function handleFormSubmit(e) {
 
     // Collect form data
     const formData = new FormData(e.target);
-    
-    // Add your Web3Forms Access Key here (Get it from web3forms.com)
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "edaae21f-ba84-4877-86f4-e594d317ddd0");
+
+    // Convert FormData to JSON
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
     fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: json
     })
     .then(async (response) => {
-        let json = await response.json();
+        let jsonRes = await response.json();
         if (response.status == 200) {
             btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
             btn.disabled = false;
             e.target.reset();
             showToast("Message sent! I'll get back to you soon.", 'success');
         } else {
-            console.log(response);
+            console.log(jsonRes);
             btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
             btn.disabled = false;
             showToast("Something went wrong.", 'error');
@@ -240,6 +246,6 @@ function handleFormSubmit(e) {
         console.log(error);
         btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
         btn.disabled = false;
-        showToast("Something went wrong.", 'error');
+        showToast("Error sending message.", 'error');
     });
 }
