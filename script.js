@@ -212,10 +212,34 @@ function handleFormSubmit(e) {
     btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
     btn.disabled = true;
 
-    setTimeout(() => {
+    // Collect form data
+    const formData = new FormData(e.target);
+    
+    // Add your Web3Forms Access Key here (Get it from web3forms.com)
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
+            btn.disabled = false;
+            e.target.reset();
+            showToast("Message sent! I'll get back to you soon.", 'success');
+        } else {
+            console.log(response);
+            btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
+            btn.disabled = false;
+            showToast("Something went wrong.", 'error');
+        }
+    })
+    .catch((error) => {
+        console.log(error);
         btn.innerHTML = '<i class="bx bx-send"></i> Send Message';
         btn.disabled = false;
-        e.target.reset();
-        showToast("Message sent! I'll get back to you soon.", 'success');
-    }, 1800);
+        showToast("Something went wrong.", 'error');
+    });
 }
