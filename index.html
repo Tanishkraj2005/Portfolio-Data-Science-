@@ -6,8 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Tanishk Raj — Data Analyst & Data Scientist portfolio. Skilled in Python, SQL, Power BI, Tableau, and Machine Learning.">
-    <meta name="keywords" content="Tanishk Raj, Data Analyst, Data Scientist, Portfolio, Python, SQL, Power BI">
+    <meta name="keywords"
+        content="Tanishk Raj, Data Analyst, Data Scientist, Portfolio, Python, SQL, Power BI, Pandas, Machine Learning">
     <meta name="author" content="Tanishk Raj">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tanishk Raj — Data Analyst Portfolio">
+    <meta property="og:description"
+        content="Turning raw data into clear insights. Skilled in Python, SQL, Power BI, Tableau & ML.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tanishkraj2005.github.io/">
+    <meta property="og:image" content="./Photos/IMG_20251226_092032.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tanishk Raj — Data Analyst Portfolio">
+    <meta name="twitter:description"
+        content="Turning raw data into clear insights. Explore my projects, skills & certifications.">
+    <meta name="twitter:image" content="./Photos/IMG_20251226_092032.png">
     <title>Tanishk Raj — Data Analyst Portfolio</title>
 
     <!-- Boxicons -->
@@ -22,9 +37,20 @@
     <link rel="stylesheet" href="./CSS/education.css">
     <link rel="stylesheet" href="./CSS/contact.css">
     <link rel="stylesheet" href="./CSS/stats.css">
+    <link rel="stylesheet" href="./CSS/extras.css">
 </head>
 
 <body>
+
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-inner">
+            <span class="loader-initials">TR</span>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- HEADER -->
@@ -73,10 +99,20 @@
             </div>
 
             <div class="btn-group">
-                <a href="./Pdf/CV.pdf" class="btn" target="_blank">View CV</a>
-                <a href="#contact" class="btn btn-outline">
-                    <i class="bx bx-envelope"></i> Hire Me
-                </a>
+                <a href="./Pdf/CV.pdf" class="btn" target="_blank"><i class="bx bx-download"></i> View CV</a>
+                <a href="#contact" class="btn btn-outline"><i class="bx bx-envelope"></i> Hire Me</a>
+            </div>
+
+            <!-- Stats Counter Row -->
+            <div class="home-stats">
+                <div class="stat-item"><span class="stat-number" data-target="6">0+</span><span
+                        class="stat-label">Projects</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number" data-target="19">0+</span><span
+                        class="stat-label">Skills</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number" data-target="6">0+</span><span
+                        class="stat-label">Certificates</span></div>
             </div>
         </div>
 
@@ -92,58 +128,31 @@
         <h2 class="heading">My <span>Skills</span></h2>
         <p class="section-subtitle">A toolkit built for turning data into decisions</p>
 
-        <div class="skills-container">
-            <!-- Box 1 -->
-            <div class="skill-box">
-                <i class="bx bx-bar-chart-alt-2 skill-box-icon" style="text-align:center;display:block;"></i>
-                <h3>Tools & Visualization</h3>
-                <div class="skill-items">
-                    <span>Excel</span>
-                    <span>Power BI</span>
-                    <span>Tableau</span>
-                    <span>Google Sheets</span>
-                </div>
-            </div>
-            <!-- Box 2 -->
-            <div class="skill-box">
-                <i class="bx bx-code-block skill-box-icon" style="text-align:center;display:block;"></i>
-                <h3>Programming Languages</h3>
-                <div class="skill-items">
-                    <span>Python</span>
-                    <span>C</span>
-                    <span>C++</span>
-                    <span>Java</span>
-                    <span>SQL</span>
-                </div>
-            </div>
-            <!-- Box 3 -->
-            <div class="skill-box">
-                <i class="bx bx-data skill-box-icon" style="text-align:center;display:block;"></i>
-                <h3>Python Libraries & Database</h3>
-                <div class="skill-items">
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                    <span>Matplotlib</span>
-                    <span>Seaborn</span>
-                    <span>Scikit-learn</span>
-                    <span>MySQL</span>
-                </div>
-            </div>
-            <!-- Box 4 -->
-            <div class="skill-box">
-                <i class="bx bx-brain skill-box-icon" style="text-align:center;display:block;"></i>
-                <h3>Core & Soft Skills</h3>
-                <div class="skill-items">
-                    <span>Data Structure & Algorithm</span>
-                    <span>Data Analysis</span>
-                    <span>Data Cleaning</span>
-                    <span>Problem Solving</span>
-                    <span>Communication</span>
-                    <span>Teamwork</span>
-                    <span>Analytical Thinking</span>
-                </div>
-            </div>
+        <!-- Category Filter Tabs -->
+        <div class="skill-tabs">
+            <button class="skill-tab-btn active" data-filter="all" data-color="#0ef">
+                <i class="bx bx-grid-alt"></i> All <span class="tab-count"></span>
+            </button>
+            <button class="skill-tab-btn" data-filter="languages" data-color="#a78bfa">
+                <i class="bx bx-code-alt"></i> Languages <span class="tab-count"></span>
+            </button>
+            <button class="skill-tab-btn" data-filter="tools" data-color="#fb923c">
+                <i class="bx bx-bar-chart-alt-2"></i> Tools & BI <span class="tab-count"></span>
+            </button>
+            <button class="skill-tab-btn" data-filter="libraries" data-color="#0ef">
+                <i class="bx bx-data"></i> Libraries & DB <span class="tab-count"></span>
+            </button>
+            <button class="skill-tab-btn" data-filter="soft" data-color="#34d399">
+                <i class="bx bx-brain"></i> Core Skills <span class="tab-count"></span>
+            </button>
         </div>
+
+        <div class="skills-grid" id="skills-grid"></div>
+
+        <div class="skills-marquee-wrapper">
+            <div class="skills-marquee-track" id="marquee-track"></div>
+        </div>
+
     </section>
 
     <!--  PROJECTS SECTION -->
@@ -155,7 +164,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Finance Tracker Project">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Finance Tracker Project" loading="lazy">
                     <span class="proj-category">Web App</span>
                 </div>
                 <div class="proj-content">
@@ -173,7 +182,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Fake Review Detection">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Fake Review Detection" loading="lazy">
                     <span class="proj-category">ML / AI</span>
                 </div>
                 <div class="proj-content">
@@ -191,7 +200,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="EDA Project">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="EDA Project" loading="lazy">
                     <span class="proj-category">Data Analysis</span>
                 </div>
                 <div class="proj-content">
@@ -209,7 +218,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Study Planner">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Study Planner" loading="lazy">
                     <span class="proj-category">Web App</span>
                 </div>
                 <div class="proj-content">
@@ -227,7 +236,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="SQL Analysis">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="SQL Analysis" loading="lazy">
                     <span class="proj-category">SQL</span>
                 </div>
                 <div class="proj-content">
@@ -245,7 +254,7 @@
 
             <div class="projects-box">
                 <div class="proj-img">
-                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Portfolio Website">
+                    <img src="./Photos/Screenshot 2026-02-10 133602.png" alt="Portfolio Website" loading="lazy">
                     <span class="proj-category">Portfolio</span>
                 </div>
                 <div class="proj-content">
@@ -264,6 +273,7 @@
         </div>
     </section>
 
+
     <!--  CREDENTIALS SECTION -->
     <section class="credentials" id="credentials">
         <h2 class="heading">My <span>Credentials</span></h2>
@@ -277,6 +287,59 @@
             <button class="toggle-btn" id="btn-achv" onclick="showSection('achievements')">
                 <i class="bx bx-trophy"></i> Achievements
             </button>
+        </div>
+
+        <!-- Certificates Carousel -->
+        <div class="cert-carousel-wrapper">
+            <div class="cert-carousel" id="cert-carousel">
+                <div class="cert-slide">
+                    <div class="cert-badge"><i class="bx bx-line-chart"></i></div><span>Data Science</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#fb923c"><i class="bx bx-network-chart"></i></div>
+                    <span>DSA</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#a78bfa"><i class="bx bx-cloud"></i></div><span>Cloud
+                        Computing</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#34d399"><i class="bx bx-code"></i></div><span>C
+                        Programming</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#f472b6"><i class="bx bx-brain"></i></div><span>TCS AI For
+                        All</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#60a5fa"><i class="bx bx-chip"></i></div><span>Bits &
+                        Bytes</span>
+                </div>
+                <!-- duplicates for loop -->
+                <div class="cert-slide">
+                    <div class="cert-badge"><i class="bx bx-line-chart"></i></div><span>Data Science</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#fb923c"><i class="bx bx-network-chart"></i></div>
+                    <span>DSA</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#a78bfa"><i class="bx bx-cloud"></i></div><span>Cloud
+                        Computing</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#34d399"><i class="bx bx-code"></i></div><span>C
+                        Programming</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#f472b6"><i class="bx bx-brain"></i></div><span>TCS AI For
+                        All</span>
+                </div>
+                <div class="cert-slide">
+                    <div class="cert-badge" style="--cb:#60a5fa"><i class="bx bx-chip"></i></div><span>Bits &
+                        Bytes</span>
+                </div>
+            </div>
         </div>
 
         <!-- Certificates Section -->
@@ -398,7 +461,7 @@
                 <span class="edu-year">2023 – Present</span>
                 <h3>Bachelor of Computer Science</h3>
                 <p><strong>College:</strong> Lovely Professional University</p>
-                <p><strong>Specialization:</strong> Data Science & AI</p>
+                <p><strong>Minor:</strong> Data Science</p>
                 <div class="edu-score">
                     <i class="bx bx-star"></i> CGPA: 7.5
                 </div>
