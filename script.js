@@ -1,10 +1,8 @@
-// Page Loader
 window.addEventListener('load', () => {
     const loader = document.getElementById('page-loader');
     setTimeout(() => loader && loader.classList.add('hidden'), 1400);
 });
 
-// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon   = document.getElementById('theme-icon');
 const body        = document.body;
@@ -20,7 +18,6 @@ function applyTheme(t) {
     themeIcon.className = t === 'light' ? 'bx bx-sun' : 'bx bx-moon';
 }
 
-// Mobile Menu
 const menuIcon = document.querySelector('#menu-icon');
 const navBar   = document.querySelector('.navbar');
 menuIcon.addEventListener('click', () => {
@@ -28,7 +25,6 @@ menuIcon.addEventListener('click', () => {
     navBar.classList.toggle('active');
 });
 
-// Scroll Events
 const sections  = document.querySelectorAll('section');
 const navLinks  = document.querySelectorAll('header nav a');
 const header    = document.querySelector('.header');
@@ -55,13 +51,11 @@ window.addEventListener('scroll', () => {
 
 if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Typed.js
 new Typed('.multiple-text', {
     strings: ['Data Analyst', 'Data Scientist', 'ML Enthusiast', 'Problem Solver'],
     typeSpeed: 85, backSpeed: 55, backDelay: 1400, loop: true,
 });
 
-// ScrollReveal
 ScrollReveal({ distance: '50px', duration: 750, delay: 80, easing: 'cubic-bezier(0.4,0,0.2,1)' });
 ScrollReveal().reveal('.home-content .greeting, .home-content h1', { origin: 'top', interval: 80 });
 ScrollReveal().reveal('.home-content .role-line, .home-content .bio, .home-stats, .social-media, .btn-group', { origin: 'bottom', interval: 100, delay: 150 });
@@ -71,7 +65,6 @@ ScrollReveal().reveal('.projects-box', { origin: 'bottom', interval: 90 });
 ScrollReveal().reveal('.edu-box', { origin: 'left', interval: 140 });
 ScrollReveal().reveal('.contact form', { origin: 'bottom', distance: '35px' });
 
-// Counter Animation
 function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
     const step   = (target / 1400) * 16;
@@ -88,7 +81,6 @@ const counterObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-number').forEach(c => counterObserver.observe(c));
 
-// Credentials Toggle
 function showSection(section) {
     document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active-section'));
     document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
@@ -120,7 +112,6 @@ async function loadLeetCodeData() {
 loadLeetCodeData();
 setInterval(loadLeetCodeData, 60000);
 
-// Toast
 function showToast(msg, type = 'success') {
     const t = document.getElementById('toast');
     if (!t) return;
@@ -129,7 +120,6 @@ function showToast(msg, type = 'success') {
     setTimeout(() => t.classList.remove('show'), 4000);
 }
 
-// Contact Form
 function handleFormSubmit(e) {
     e.preventDefault();
     const btn = document.getElementById('submit-btn');
@@ -157,7 +147,6 @@ function handleFormSubmit(e) {
     });
 }
 
-// ── Skills: Data-Driven Cards + Tabs + Stagger + Count Badges ─────────────────
 const DEVICONS = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
 const ICONS8   = 'https://img.icons8.com/color/48';
 
@@ -183,7 +172,6 @@ const SKILLS = [
     { name: 'Communication',   cat: 'soft',      icon: 'bx bx-conversation' },
 ];
 
-// Build skill cards
 const grid = document.getElementById('skills-grid');
 SKILLS.forEach(s => {
     const inner = s.img ? `<img src="${s.img}" alt="${s.name}">` : `<i class="${s.icon}"></i>`;
@@ -195,7 +183,6 @@ SKILLS.forEach(s => {
     );
 });
 
-// Build marquee (duplicate for loop)
 const MARQUEE_SKILLS = SKILLS.filter(s => s.img);
 const marquee = document.getElementById('marquee-track');
 [...MARQUEE_SKILLS, ...MARQUEE_SKILLS].forEach(s => {
@@ -204,12 +191,10 @@ const marquee = document.getElementById('marquee-track');
     );
 });
 
-// Tab buttons + count badges + stagger
 const tabBtns    = document.querySelectorAll('.skill-tab-btn');
 const skillCards = document.querySelectorAll('.skill-card');
 const skillsGridEl = document.getElementById('skills-grid');
 
-// Count badges
 const catCount = {};
 skillCards.forEach(c => { catCount[c.dataset.category] = (catCount[c.dataset.category] || 0) + 1; });
 tabBtns.forEach(btn => {
@@ -218,7 +203,6 @@ tabBtns.forEach(btn => {
     if (badge) badge.textContent = f === 'all' ? skillCards.length : (catCount[f] || 0);
 });
 
-// Stagger helpers
 function setStagger() {
     let i = 0;
     skillCards.forEach(c => { if (!c.classList.contains('hidden')) c.style.setProperty('--stagger-i', i++); });
@@ -231,13 +215,11 @@ function reAnimate() {
 }
 setStagger();
 
-// IntersectionObserver — play on scroll into view
 const skillObs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { skillsGridEl.classList.add('in-view'); skillObs.unobserve(e.target); } });
 }, { threshold: 0.08 });
 skillObs.observe(document.querySelector('#skills'));
 
-// Tab filter
 tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         tabBtns.forEach(b => b.classList.remove('active'));

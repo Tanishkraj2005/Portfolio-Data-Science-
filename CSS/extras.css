@@ -1,4 +1,3 @@
-/* ── Page Loader ── */
 #page-loader {
     position: fixed;
     inset: 0;
@@ -46,7 +45,6 @@
 
 
 
-/* ── GitHub Section ── */
 .github-section {
     padding: 8rem 9% 5rem;
     background: var(--bg-color);
@@ -169,7 +167,6 @@
     color: var(--cb);
 }
 
-/* Fallback for browsers without color-mix */
 @supports not (background: color-mix(in srgb, red 50%, blue)) {
     .cert-badge { background: rgba(0,238,255,.1); border-color: rgba(0,238,255,.3); }
 }

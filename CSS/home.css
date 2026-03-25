@@ -138,7 +138,6 @@
     z-index: 0;
 }
 
-/* Left Content  */
 .home-content {
     position: relative;
     z-index: 1;
@@ -233,7 +232,6 @@
     align-self: stretch;
 }
 
-/* Social media */
 .social-media {
     display: flex;
     gap: 1rem;
@@ -261,7 +259,6 @@
     border-color: var(--main-color);
 }
 
-/* Buttons */
 .btn-group {
     display: flex;
     gap: 1.2rem;
@@ -384,8 +381,6 @@
     z-index: -2;
     pointer-events: none;
 }
-
-
 
 .img-badge {
     position: absolute;
